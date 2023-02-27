@@ -22,4 +22,13 @@ public class homework4 {
         scanner.close();
         return intArray;
     }
+
+    private static void heapSort(int[] arr) { // Построение дерева
+        int n = arr.length;
+        for(int i = n / 2 - 1; i >= 0; i--) {
+            heapify(arr, i, n);
+        }
+
+
+    }
 }
