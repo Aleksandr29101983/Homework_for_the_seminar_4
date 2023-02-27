@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -52,5 +54,14 @@ public class homework4 {
 
             heapify(arr, largest, n);
         }
+    }
+
+    private static void printArray(int [] arr) throws FileNotFoundException{
+        System.out.println(Arrays.toString(arr));
+        File file = new File("output.txt");
+        PrintWriter pw = new PrintWriter(file);
+        String str = Arrays.toString(arr);
+        pw.println(str);
+        pw.close();
     }
 }
